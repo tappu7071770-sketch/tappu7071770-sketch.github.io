@@ -9,6 +9,9 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3750032345755031"
      crossorigin="anonymous"></script>
 
+<meta name="description" content="Turkish Energy Drink – Powerful fizzy energy in 500ml can & bottle. Order online.">
+<meta name="robots" content="index, follow">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -45,15 +48,34 @@ header a:hover{color:#ffaa00}
 
 /* MAIN */
 #main{display:flex;justify-content:center;gap:80px;flex-wrap:wrap;padding:50px 20px}
-#product{width:260px;text-align:center;position:relative;animation:canFloat 4s ease-in-out infinite}
-#product img{width:100%;filter:drop-shadow(0 0 25px rgba(255,60,0,.6))}
-#product::before{content:"";position:absolute;inset:-45px;
-background:radial-gradient(circle,rgba(255,80,0,.85),rgba(255,40,0,.45),transparent 70%);
-filter:blur(40px);z-index:-1;animation:glowPulse 2.6s ease-in-out infinite}
-@keyframes canFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
-@keyframes glowPulse{0%{opacity:.65;transform:scale(.95)}
-50%{opacity:1;transform:scale(1.12)}100%{opacity:.65;transform:scale(.95)}}
-#price{margin-top:18px;color:#ffaa00;font-size:22px;font-weight:bold}
+
+/* PRODUCT CARDS */
+.product{
+width:240px;
+text-align:center;
+position:relative;
+animation:canFloat 4s ease-in-out infinite
+}
+.product img{width:100%;filter:drop-shadow(0 0 25px rgba(255,60,0,.6))}
+.product::before{
+content:"";
+position:absolute;
+inset:-40px;
+background:radial-gradient(circle,rgba(255,80,0,.7),transparent 70%);
+filter:blur(35px);
+z-index:-1;
+animation:glowPulse 3s ease-in-out infinite
+}
+
+@keyframes canFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
+@keyframes glowPulse{0%{opacity:.6}50%{opacity:1}100%{opacity:.6}}
+
+.price{
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+color:#ffaa00
+}
 
 /* ORDER */
 #order{width:320px;padding:28px;background:rgba(10,0,0,0.8);
@@ -80,7 +102,7 @@ border-top:1px solid rgba(255,60,0,.3)}
 
 <div id="energy-loader">
   <div class="energy-ring"></div>
-  <img src="1.png" class="energy-logo">
+  <img src="1.png" class="energy-logo" alt="Turkish Energy Logo">
 </div>
 
 <video id="bgVideo" autoplay muted loop playsinline>
@@ -103,9 +125,17 @@ border-top:1px solid rgba(255,60,0,.3)}
 </div>
 
 <div id="main">
-  <div id="product">
-    <img src="1.png">
-    <div id="price">500ml – Rs. 250</div>
+
+  <!-- CAN PRODUCT -->
+  <div class="product">
+    <img src="1.png" alt="Turkish Energy Can 500ml">
+    <div class="price">500ml Can – Rs. 250</div>
+  </div>
+
+  <!-- BOTTLE PRODUCT (NEW ADDITION) -->
+  <div class="product">
+    <img src="2.png" alt="Turkish Energy Bottle 500ml">
+    <div class="price">500ml Bottle – Rs. 150</div>
   </div>
 
   <div id="order">
@@ -118,11 +148,12 @@ border-top:1px solid rgba(255,60,0,.3)}
       <button type="submit">ORDER NOW</button>
     </form>
   </div>
+
 </div>
 
-<section id="about"><h2>About Turkish Energy</h2><p>Storm packed in a can.</p></section>
+<section id="about"><h2>About Turkish Energy</h2><p>Storm packed in every sip. Powerful fizz, bold energy.</p></section>
 <section id="contact"><h2>Contact</h2><p>Email: tappu7071770@gmail.com</p></section>
-<section id="privacy"><h2>Privacy</h2><p>AdSense & privacy compliant.</p></section>
+<section id="privacy"><h2>Privacy Policy</h2><p>This website follows Google AdSense content & privacy guidelines.</p></section>
 
 <footer>© 2026 Turkish Energy. All rights reserved.</footer>
 
