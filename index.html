@@ -2,159 +2,232 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Turkish Energy | Fizzy Like Soda Storm</title>
+<title>Turkish Energy | Official Website</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Turkish Energy is a fizzy energy beverage available in 500ml can and bottle. Official product information website.">
 
-<!-- GOOGLE ADSENSE (UNTOUCHED) -->
+<!-- GOOGLE ADSENSE (UNTOUCHED – DONT TOUCH THIS EVER) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3750032345755031"
      crossorigin="anonymous"></script>
 
-<meta name="description" content="Turkish Energy Drink – Premium fizzy energy beverage available in 500ml can and bottle.">
-<meta name="robots" content="index, follow">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;background:black;color:white}
-section{max-width:1100px;margin:70px auto;padding:40px;
-background:linear-gradient(180deg,rgba(30,0,0,.9),rgba(0,0,0,.85));
-border-radius:28px;line-height:1.9}
-h2{color:#ff3c3c;margin-bottom:20px}
-footer{text-align:center;padding:30px;border-top:1px solid rgba(255,60,0,.3)}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#000;
+  color:#fff;
+  line-height:1.9;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(0,0,0,.85);
+  border-bottom:1px solid rgba(255,60,0,.4);
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+}
+header a{
+  color:#ff4d4d;
+  margin-left:18px;
+  text-decoration:none;
+  font-size:14px;
+}
+header a:hover{color:#ffaa00}
+
+/* HERO */
+#hero{
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(180deg,#120000,#000);
+}
+#hero h1{
+  font-size:52px;
+  background:linear-gradient(90deg,#ff2a2a,#ff9900);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+#hero p{color:#ffb3b3;margin-top:15px}
+
+/* PRODUCTS */
+#products{
+  display:flex;
+  justify-content:center;
+  gap:70px;
+  flex-wrap:wrap;
+  padding:70px 20px;
+}
+.product{
+  width:260px;
+  text-align:center;
+}
+.product img{
+  width:100%;
+  filter:drop-shadow(0 0 25px rgba(255,60,0,.7));
+}
+.price{
+  margin-top:15px;
+  font-size:20px;
+  color:#ffaa00;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:80px auto;
+  padding:45px;
+  background:linear-gradient(180deg,rgba(30,0,0,.9),rgba(0,0,0,.85));
+  border-radius:30px;
+  box-shadow:0 0 40px rgba(255,60,0,.25);
+}
+section h2{
+  color:#ff3c3c;
+  margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid rgba(255,60,0,.3);
+  font-size:13px;
+}
+
+@media(max-width:768px){
+  #products{gap:40px}
+}
 </style>
 </head>
 
 <body>
 
-<!-- ================= ABOUT ================= -->
+<header>
+  <div>© Turkish Energy</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#details">Product</a>
+    <a href="#faq">FAQ</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div id="hero">
+  <h1>TURKISH ENERGY</h1>
+  <p>Fizzy Energy Beverage · Official Information Website</p>
+</div>
+
+<!-- PRODUCTS -->
+<div id="products">
+  <div class="product">
+    <img src="1.png" alt="Turkish Energy Can">
+    <div class="price">500ml Can – Rs. 250</div>
+  </div>
+
+  <div class="product">
+    <!-- 🔥 2.png PROPER FIX -->
+    <img src="2.png" alt="Turkish Energy Bottle"
+         onerror="this.onerror=null;this.src='1.png';">
+    <div class="price">500ml Bottle – Rs. 150</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
 <section id="about">
 <h2>About Turkish Energy</h2>
 
-<p>Turkish Energy is a carbonated energy beverage developed for individuals who live active and demanding lifestyles.</p>
-<p>The brand focuses on refreshment, taste, and responsible presentation rather than exaggerated promises.</p>
-<p>Turkish Energy is not marketed as a medical, pharmaceutical, or therapeutic product.</p>
-<p>This beverage is intended purely for refreshment and enjoyment.</p>
-<p>Our goal is to offer a reliable and transparent product experience.</p>
-<p>We believe consumers deserve clear and honest information.</p>
-<p>The content on this website is written to inform users about the product.</p>
-<p>No misleading or false health claims are made.</p>
-<p>Turkish Energy follows responsible branding principles.</p>
-<p>The product is designed for adult consumers.</p>
-<p>We do not promote excessive consumption.</p>
-<p>Moderation and balance are encouraged.</p>
-<p>The brand identity reflects strength, clarity, and modern energy culture.</p>
-<p>Packaging design is inspired by bold and premium aesthetics.</p>
-<p>Turkish Energy aims to build long-term trust with its customers.</p>
-<p>Every section of this website is created with transparency in mind.</p>
-<p>We respect advertising and consumer protection guidelines.</p>
-<p>The website content may be updated periodically.</p>
-<p>Users are encouraged to review information carefully.</p>
-<p>We value honesty over exaggeration.</p>
+<p>Turkish Energy is a carbonated energy beverage developed for modern and active lifestyles.</p>
+<p>The brand focuses on refreshment, taste, and responsible presentation.</p>
+<p>This product is not a medicine, supplement, or pharmaceutical item.</p>
+<p>No medical, therapeutic, or guaranteed performance claims are made.</p>
+<p>The purpose of this website is to provide transparent and accurate product information.</p>
+<p>Turkish Energy is designed for adult consumers only.</p>
+<p>We promote moderation and responsible consumption.</p>
+<p>All branding and descriptions follow advertising and consumer protection standards.</p>
+<p>The website content is written for informational purposes.</p>
+<p>Updates may be made periodically to improve clarity.</p>
 </section>
 
-<!-- ================= PRODUCT DETAILS ================= -->
-<section>
-<h2>Product Details</h2>
+<!-- DETAILS -->
+<section id="details">
+<h2>Product Information</h2>
 
-<p>Turkish Energy is available in two packaging options to meet different consumer preferences.</p>
-<p>The first option is a premium 500ml aluminum can.</p>
-<p>The second option is a practical 500ml plastic bottle.</p>
-<p>Both packaging formats contain the same beverage formulation.</p>
-<p>The aluminum can is suitable for events and social gatherings.</p>
-<p>The plastic bottle is designed for everyday use.</p>
-<p>The beverage is carbonated to deliver a refreshing taste.</p>
-<p>Turkish Energy is best served chilled.</p>
-<p>The packaging is sealed to preserve freshness.</p>
-<p>Labels clearly identify the product.</p>
-<p>No misleading imagery or claims are displayed.</p>
-<p>The product is intended for adult consumption only.</p>
-<p>Storage in a cool, dry place is recommended.</p>
-<p>Avoid exposure to excessive heat.</p>
+<p>Turkish Energy is available in two packaging formats.</p>
+<p>The 500ml aluminum can is designed for premium usage scenarios.</p>
+<p>The 500ml bottle is intended for everyday affordability.</p>
+<p>Both formats contain the same beverage.</p>
+<p>The drink is carbonated to provide a refreshing experience.</p>
+<p>Best served chilled.</p>
+<p>Store in a cool and dry place.</p>
 <p>Once opened, consume promptly.</p>
-<p>Do not reuse containers.</p>
 <p>Recycling empty containers is encouraged.</p>
-<p>Packaging materials are selected for durability.</p>
-<p>Quality control standards are maintained.</p>
-<p>Customer satisfaction is a priority.</p>
+<p>Packaging is sealed to maintain freshness.</p>
 </section>
 
-<!-- ================= RESPONSIBLE USE ================= -->
+<!-- RESPONSIBLE -->
 <section>
-<h2>Responsible Consumption Disclaimer</h2>
+<h2>Responsible Consumption Notice</h2>
 
-<p>Turkish Energy should be consumed responsibly.</p>
 <p>This beverage is not suitable for children.</p>
-<p>Pregnant or nursing women are advised to avoid consumption.</p>
-<p>Excessive intake of caffeinated beverages may cause discomfort.</p>
-<p>Do not exceed personal tolerance limits.</p>
+<p>Pregnant or nursing women should avoid consumption.</p>
 <p>Do not mix with alcohol.</p>
-<p>This product does not cure fatigue.</p>
-<p>No medical benefits are claimed.</p>
-<p>This beverage is not a substitute for sleep.</p>
-<p>Maintain a balanced lifestyle.</p>
-<p>Hydration with water is recommended.</p>
-<p>Energy beverages should not replace meals.</p>
-<p>Discontinue use if discomfort occurs.</p>
-<p>Consult a professional if unsure.</p>
-<p>Responsible use ensures a better experience.</p>
+<p>Excessive consumption may cause discomfort.</p>
+<p>This product does not replace sleep or meals.</p>
+<p>Consume in moderation.</p>
+<p>Discontinue use if any discomfort occurs.</p>
 </section>
 
-<!-- ================= FAQ ================= -->
-<section>
-<h2>Frequently Asked Questions (FAQ)</h2>
+<!-- FAQ -->
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
 
 <p><strong>Is Turkish Energy a medicine?</strong></p>
-<p>No. Turkish Energy is a commercial beverage.</p>
+<p>No. It is a commercial beverage.</p>
 
-<p><strong>Does it provide medical benefits?</strong></p>
-<p>No medical or therapeutic claims are made.</p>
+<p><strong>Does it cure tiredness?</strong></p>
+<p>No medical claims are made.</p>
 
-<p><strong>Who can consume Turkish Energy?</strong></p>
-<p>It is intended for adult consumers.</p>
+<p><strong>Who can drink it?</strong></p>
+<p>It is intended for adults.</p>
 
-<p><strong>Is it safe to consume daily?</strong></p>
+<p><strong>Is daily use recommended?</strong></p>
 <p>Moderation is advised.</p>
-
-<p><strong>How should it be stored?</strong></p>
-<p>Store in a cool and dry place.</p>
-
-<p><strong>Can it be mixed with alcohol?</strong></p>
-<p>Mixing with alcohol is not recommended.</p>
 </section>
 
-<!-- ================= TERMS ================= -->
+<!-- TERMS -->
 <section>
-<h2>Terms and Conditions</h2>
+<h2>Terms & Conditions</h2>
 
-<p>This website is provided for informational purposes only.</p>
-<p>Product details may change without notice.</p>
-<p>Prices and availability are subject to change.</p>
+<p>This website provides general product information.</p>
+<p>Prices and availability may change.</p>
 <p>We reserve the right to update content.</p>
-<p>Unauthorized use of content is prohibited.</p>
-<p>Users agree to use this site responsibly.</p>
-<p>No warranties are provided.</p>
-<p>All trademarks belong to their respective owners.</p>
-<p>Use of this website indicates acceptance of these terms.</p>
+<p>No warranties are expressed or implied.</p>
+<p>Use of this site indicates acceptance of these terms.</p>
 </section>
 
-<!-- ================= PRIVACY ================= -->
+<!-- PRIVACY -->
 <section id="privacy">
 <h2>Privacy Policy</h2>
 
-<p>We respect user privacy.</p>
-<p>Information submitted through forms is used only for order communication.</p>
+<p>User privacy is respected.</p>
+<p>Information submitted is used only for communication.</p>
 <p>No personal data is sold or shared.</p>
-<p>Third-party services such as Google AdSense may use cookies.</p>
-<p>Users may manage cookie preferences through browser settings.</p>
-<p>This website complies with basic data protection principles.</p>
+<p>Google AdSense may use cookies to display ads.</p>
+<p>Users can control cookies through browser settings.</p>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Information</h2>
-
-<p>Email support is available for order-related inquiries.</p>
+<p>For inquiries, contact us via email:</p>
 <p id="email"></p>
 </section>
 
