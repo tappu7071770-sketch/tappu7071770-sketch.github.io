@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Turkish Energy | Fizzy Like Soda Storm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Impact, Arial Black, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== VIDEO BACKGROUND ===== */
+#bgVideo{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
+}
+
+/* ===== HEADER ===== */
+#header{
+    text-align:center;
+    padding:30px 15px;
+}
+
+#brand{
+    font-size:42px;
+    letter-spacing:3px;
+    color:#ff2a2a;
+    text-shadow:0 0 15px red;
+}
+
+#tagline{
+    font-size:18px;
+    color:#00ffd5;
+    margin-top:8px;
+}
+
+/* ===== MAIN ===== */
+#main{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    padding:30px;
+}
+
+/* ===== PRODUCT ===== */
+#product{
+    width:260px;
+    text-align:center;
+}
+
+#can{
+    width:100%;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px orange);
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+#price{
+    margin-top:15px;
+    font-size:22px;
+    color:#ffaa00;
+    text-shadow:0 0 10px orange;
+}
+
+/* ===== ORDER ===== */
+#order{
+    width:300px;
+    background:rgba(0,0,0,0.6);
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,50,50,0.5);
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    font-size:14px;
+}
+
+input::placeholder{
+    color:#ccc;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#ff2a2a,#ff9900);
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    color:black;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px orange;
+}
+
+/* ===== CONTACT ===== */
+#contact{
+    text-align:center;
+    margin:30px 0;
+    font-size:18px;
+}
+
+#contact span{
+    color:#00ffd5;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video id="bgVideo" autoplay muted loop>
+    <source src="assets/1.mp4" type="video/mp4">
+</video>
+<div id="overlay"></div>
+
+<!-- HEADER -->
+<div id="header">
+    <div id="brand">TURKISH ENERGY</div>
+    <div id="tagline">Fizzy Like Soda Storm ⚡</div>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+    <!-- PRODUCT -->
+    <div id="product">
+        <img id="can" src="assets/1.png" alt="Turkish Energy Can">
+        <div id="price">500ml – Rs. 250</div>
+    </div>
+
+    <!-- ORDER FORM -->
+    <div id="order">
+        <input id="name" type="text" placeholder="Your Name">
+        <input id="phone" type="text" placeholder="Phone / WhatsApp">
+        <input id="qty" type="number" placeholder="Quantity">
+        <button onclick="orderNow()">ORDER NOW</button>
+    </div>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact">
+    📞 Order & Info: <span>0300-1234567</span>
+</div>
+
+<script>
+function orderNow(){
+    let n = document.getElementById("name").value;
+    let p = document.getElementById("phone").value;
+    let q = document.getElementById("qty").value;
+
+    if(n=="" || p=="" || q==""){
+        alert("Please fill all fields!");
+    }else{
+        alert(
+            "⚡ Turkish Energy Order Confirmed!\n\n"+
+            "Name: "+n+"\n"+
+            "Phone: "+p+"\n"+
+            "Quantity: "+q+" Can(s)"
+        );
+    }
+}
+</script>
+
+</body>
+</html>
