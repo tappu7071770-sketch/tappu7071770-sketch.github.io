@@ -22,146 +22,60 @@ body{font-family:Arial, sans-serif;background:black;color:white;}
 body.loading{overflow:hidden;height:100vh}
 
 /* LOADER */
-#energy-loader{
-position:fixed;inset:0;
-background:radial-gradient(circle at center,#1a0000,#000);
-display:flex;align-items:center;justify-content:center;
-z-index:99999;transition:opacity .6s ease;
-}
-.energy-ring{
-position:absolute;width:240px;height:240px;border-radius:50%;
-border:4px solid transparent;
-border-top:4px solid #ff2a2a;
-border-right:4px solid #ffaa00;
-filter:drop-shadow(0 0 40px #ff3c00);
-animation:spin 1.1s linear infinite;
-}
-.energy-logo{
-width:140px;
-animation:pulse 1.4s ease-in-out infinite;
-filter:drop-shadow(0 0 35px rgba(255,60,0,.9));
-}
+#energy-loader{position:fixed;inset:0;background:radial-gradient(circle at center,#1a0000,#000);
+display:flex;align-items:center;justify-content:center;z-index:99999;transition:.6s}
+.energy-ring{position:absolute;width:240px;height:240px;border-radius:50%;
+border:4px solid transparent;border-top:4px solid #ff2a2a;border-right:4px solid #ffaa00;
+filter:drop-shadow(0 0 40px #ff3c00);animation:spin 1.1s linear infinite;}
+.energy-logo{width:140px;animation:pulse 1.4s infinite;
+filter:drop-shadow(0 0 35px rgba(255,60,0,.9));}
 @keyframes spin{to{transform:rotate(360deg)}}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes pulse{50%{transform:scale(1.08)}}
 
-/* BACKGROUND */
-#bgVideo{
-position:fixed;inset:0;width:100%;height:100%;
-object-fit:cover;z-index:-2;
-}
-#overlay{
-position:fixed;inset:0;
-background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(90,0,0,.6));
-z-index:-1;
-}
+/* BG */
+#bgVideo{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+#overlay{position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(90,0,0,.6));z-index:-1}
 
 /* HEADER */
-header{
-display:flex;justify-content:space-between;
-padding:15px 25px;
-background:rgba(0,0,0,0.65);
-border-bottom:1px solid rgba(255,60,0,.3);
-}
-header a{
-color:#ff4d4d;margin-left:18px;
-text-decoration:none;font-size:14px;
-}
+header{display:flex;justify-content:space-between;padding:15px 25px;
+background:rgba(0,0,0,.65);border-bottom:1px solid rgba(255,60,0,.3)}
+header a{color:#ff4d4d;margin-left:18px;text-decoration:none;font-size:14px}
 header a:hover{color:#ffaa00}
 
 /* HERO */
 #hero{text-align:center;padding:55px 20px}
-#hero h1{
-font-size:48px;
-background:linear-gradient(90deg,#ff2a2a,#ff9900);
--webkit-background-clip:text;
-color:transparent;
-letter-spacing:2px;
-}
-#hero p{color:#ffb3b3;margin-top:12px;font-size:16px}
+#hero h1{font-size:48px;background:linear-gradient(90deg,#ff2a2a,#ff9900);
+-webkit-background-clip:text;color:transparent;letter-spacing:2px}
+#hero p{color:#ffb3b3;margin-top:12px}
 
 /* MAIN */
-#main{
-display:flex;justify-content:center;
-gap:80px;flex-wrap:wrap;
-padding:50px 20px;
-}
+#main{display:flex;justify-content:center;gap:80px;flex-wrap:wrap;padding:50px 20px}
 
 /* PRODUCT */
-.product{
-width:240px;text-align:center;
-position:relative;
-animation:float 4s ease-in-out infinite;
-}
-.product img{
-width:100%;
-filter:drop-shadow(0 0 25px rgba(255,60,0,.6));
-}
-.product::before{
-content:"";
-position:absolute;inset:-40px;
-background:radial-gradient(circle,rgba(255,80,0,.7),transparent 70%);
-filter:blur(35px);z-index:-1;
-}
-@keyframes float{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-25px)}
-}
-.price{
-margin-top:15px;
-font-size:20px;
-font-weight:bold;
-color:#ffaa00;
-}
+.product{width:240px;text-align:center;position:relative;animation:float 4s infinite}
+.product img{width:100%;filter:drop-shadow(0 0 25px rgba(255,60,0,.6))}
+@keyframes float{50%{transform:translateY(-25px)}}
+.price{margin-top:15px;font-size:20px;font-weight:bold;color:#ffaa00}
 
 /* ORDER */
-#order{
-width:320px;
-padding:28px;
-background:rgba(10,0,0,0.8);
-border-radius:24px;
-box-shadow:0 0 45px rgba(255,60,0,.35);
-}
+#order{width:320px;padding:28px;background:rgba(10,0,0,.8);
+border-radius:24px;box-shadow:0 0 45px rgba(255,60,0,.35)}
 #order input,#order textarea,#order button{
-width:100%;padding:13px;
-margin-bottom:15px;
-border:none;border-radius:14px;
-}
-#order textarea{resize:none;height:80px}
-#order button{
-background:linear-gradient(135deg,#ff2a2a,#ff9900);
-font-weight:bold;cursor:pointer;
-}
-#order button:hover{
-transform:scale(1.03);
-box-shadow:0 0 25px rgba(255,160,0,.6);
-}
+width:100%;padding:13px;margin-bottom:15px;border:none;border-radius:14px}
+#order textarea{height:80px;resize:none}
+#order button{background:linear-gradient(135deg,#ff2a2a,#ff9900);font-weight:bold}
 
-/* SECTIONS */
-section{
-max-width:1000px;
-margin:70px auto;
-padding:40px;
+/* CONTENT SECTIONS */
+section{max-width:1000px;margin:70px auto;padding:40px;
 background:linear-gradient(180deg,rgba(30,0,0,.9),rgba(0,0,0,.8));
-border-radius:28px;
-line-height:1.9;
-box-shadow:0 0 45px rgba(255,60,0,.25);
-scroll-margin-top:90px;
-}
+border-radius:28px;line-height:1.9;box-shadow:0 0 45px rgba(255,60,0,.25);
+scroll-margin-top:90px}
 section h2{color:#ff3c3c;margin-bottom:20px}
 
 /* FOOTER */
-footer{
-text-align:center;
-padding:25px;
-font-size:13px;
-opacity:.85;
-border-top:1px solid rgba(255,60,0,.3);
-}
+footer{text-align:center;padding:25px;font-size:13px;border-top:1px solid rgba(255,60,0,.3)}
 
-/* PERFORMANCE */
-@media(max-width:768px){
-.product{animation:none}
-}
+@media(max-width:768px){.product{animation:none}}
 </style>
 </head>
 
@@ -169,7 +83,7 @@ border-top:1px solid rgba(255,60,0,.3);
 
 <div id="energy-loader">
   <div class="energy-ring"></div>
-  <img src="1.png" class="energy-logo" alt="Turkish Energy Drink Official Logo">
+  <img src="1.png" class="energy-logo" alt="Turkish Energy Official Logo">
 </div>
 
 <video id="bgVideo" autoplay muted loop playsinline preload="auto">
@@ -192,14 +106,13 @@ border-top:1px solid rgba(255,60,0,.3);
 </div>
 
 <div id="main">
-
   <div class="product">
     <img src="1.png" alt="Turkish Energy Can">
     <div class="price">500ml Can – Rs. 250</div>
   </div>
 
   <div class="product">
-    <img src="2.png" alt="Turkish Energy Bottle">
+    <img src="2.png" alt="Turkish Energy Bottle" onerror="this.src='1.png'">
     <div class="price">500ml Bottle – Rs. 150</div>
   </div>
 
@@ -210,21 +123,71 @@ border-top:1px solid rgba(255,60,0,.3);
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="text" name="phone" placeholder="Phone / WhatsApp" required>
       <textarea name="address" placeholder="Delivery Address" required></textarea>
-      <input type="number" name="qty" placeholder="Quantity" min="1" required>
+      <input type="number" name="qty" min="1" placeholder="Quantity" required>
       <button type="submit">ORDER NOW</button>
     </form>
   </div>
-
 </div>
+
+<!-- 🔥 ADSENSE TRUST CONTENT (RESTORED FULL) -->
 
 <section id="about">
 <h2>About Turkish Energy</h2>
-<p>Turkish Energy is a professionally positioned fizzy energy drink designed for modern lifestyles.</p>
+<p>
+Turkish Energy is a professionally positioned fizzy energy drink designed for modern lifestyles.
+Our focus is refreshment, taste, and responsible branding without misleading claims.
+</p>
+<p>
+This website exists to provide clear product information and transparent communication to users.
+</p>
+</section>
+
+<section>
+<h2>Product Details</h2>
+<p>
+Turkish Energy is available in a 500ml premium can and a 500ml affordable bottle.
+Both variants contain the same beverage quality.
+</p>
+<p>
+The can is designed for events, gaming, and work environments,
+while the bottle is ideal for everyday affordability.
+</p>
+</section>
+
+<section>
+<h2>Responsible Consumption Disclaimer</h2>
+<ul>
+<li>Not suitable for children</li>
+<li>Not recommended for pregnant or nursing women</li>
+<li>Avoid mixing with alcohol</li>
+<li>Consume in moderation</li>
+</ul>
+</section>
+
+<section>
+<h2>Frequently Asked Questions (FAQ)</h2>
+<p><strong>Is this a medicine?</strong><br>No. It is a commercial beverage.</p>
+<p><strong>Does it cure fatigue?</strong><br>No medical claims are made.</p>
+<p><strong>How to order?</strong><br>Use the form above.</p>
+</section>
+
+<section>
+<h2>Terms & Conditions</h2>
+<p>
+All information is for general awareness only.
+Prices and availability may change without notice.
+</p>
 </section>
 
 <section id="privacy">
 <h2>Privacy Policy</h2>
-<p>We respect user privacy. Information submitted is used only for order communication.</p>
+<p>
+User information is used strictly for order communication.
+No data is sold or misused.
+</p>
+<p>
+Google AdSense may use cookies to display ads.
+</p>
 </section>
 
 <section id="contact">
@@ -242,10 +205,7 @@ const wait=Math.max(0,MIN-(Date.now()-start));
 setTimeout(()=>{
 const l=document.getElementById("energy-loader");
 l.style.opacity="0";
-setTimeout(()=>{
-l.remove();
-document.body.classList.remove("loading");
-},600);
+setTimeout(()=>{l.remove();document.body.classList.remove("loading")},600);
 },wait);
 });
 document.getElementById("email").innerText="tappu7071770@gmail.com";
