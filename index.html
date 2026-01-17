@@ -7,21 +7,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="robots" content="index, follow">
-<meta name="description" content="Turkish Energy is a carbonated energy beverage available in can and bottle formats. Official informational website.">
+<meta name="description" content="Turkish Energy is a carbonated energy beverage available in can and bottle formats.">
 
-<!-- GOOGLE ADSENSE (UNTOUCHED – DO NOT MODIFY) -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3750032345755031"
-     crossorigin="anonymous"></script>
+<!-- ADSENSE (UNTOUCHED) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3750032345755031" crossorigin="anonymous"></script>
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:transparent;
+  background:#000;
   color:#fff;
-  line-height:1.9;
+  overflow-x:hidden;
 }
+
+/* LOADER */
+#loader{
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+#loader span{
+  width:60px;
+  height:60px;
+  border:5px solid #ff2a2a;
+  border-top-color:transparent;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
 
 /* BACKGROUND VIDEO */
 #bg-video{
@@ -39,8 +62,8 @@ header{
   position:sticky;
   top:0;
   z-index:999;
-  background:rgba(0,0,0,.88);
-  border-bottom:1px solid rgba(255,60,0,.4);
+  background:rgba(0,0,0,.9);
+  border-bottom:1px solid rgba(255,60,0,.5);
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -52,24 +75,31 @@ header a{
   text-decoration:none;
   font-size:14px;
 }
-header a:hover{color:#ffaa00}
+header a:hover{
+  color:#ffaa00;
+  text-shadow:0 0 10px #ffaa00;
+}
 
 /* HERO */
 #hero{
   text-align:center;
-  padding:110px 20px 90px;
-  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.85));
+  padding:120px 20px 100px;
 }
 #hero h1{
-  font-size:56px;
-  background:linear-gradient(90deg,#ff2a2a,#ff9900);
+  font-size:60px;
+  background:linear-gradient(90deg,#ff2a2a,#ffaa00);
   -webkit-background-clip:text;
   color:transparent;
+  animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+  from{text-shadow:0 0 10px #ff2a2a}
+  to{text-shadow:0 0 30px #ffaa00}
 }
 #hero p{
-  color:#ffb3b3;
-  margin-top:18px;
-  max-width:780px;
+  margin-top:20px;
+  color:#ffd1d1;
+  max-width:800px;
   margin-inline:auto;
 }
 
@@ -77,21 +107,30 @@ header a:hover{color:#ffaa00}
 #products{
   display:flex;
   justify-content:center;
-  gap:80px;
+  gap:90px;
   flex-wrap:wrap;
   padding:90px 20px;
 }
 .product{
   width:270px;
   text-align:center;
+  transition:.4s;
+}
+.product:hover{
+  transform:translateY(-15px) scale(1.05);
 }
 .product img{
   width:100%;
-  filter:drop-shadow(0 0 28px rgba(255,60,0,.7));
+  animation:float 3s ease-in-out infinite;
+  filter:drop-shadow(0 0 35px rgba(255,60,0,.9));
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
 }
 .price{
-  margin-top:16px;
-  font-size:21px;
+  margin-top:18px;
+  font-size:22px;
   color:#ffaa00;
   font-weight:bold;
 }
@@ -100,68 +139,52 @@ header a:hover{color:#ffaa00}
 section{
   max-width:1150px;
   margin:90px auto;
-  padding:55px;
-  background:linear-gradient(180deg,rgba(30,0,0,.92),rgba(0,0,0,.88));
+  padding:60px;
+  background:linear-gradient(180deg,rgba(40,0,0,.95),rgba(0,0,0,.9));
   border-radius:30px;
-  box-shadow:0 0 45px rgba(255,60,0,.28);
+  box-shadow:0 0 55px rgba(255,60,0,.4);
+  transition:.4s;
+}
+section:hover{
+  box-shadow:0 0 80px rgba(255,170,0,.6);
 }
 section h2{
   color:#ff3c3c;
   margin-bottom:25px;
+}
+section h2 i{
+  margin-right:10px;
+  color:#ffaa00;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
   padding:35px;
-  border-top:1px solid rgba(255,60,0,.3);
+  background:rgba(0,0,0,.9);
+  border-top:1px solid rgba(255,60,0,.4);
   font-size:13px;
-  background:rgba(0,0,0,.88);
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  header{
-    flex-direction:column;
-    gap:10px;
-    padding:12px 15px;
-  }
-  header nav a{
-    margin:0 8px;
-    font-size:13px;
-  }
-  #hero{
-    padding:75px 15px;
-  }
-  #hero h1{
-    font-size:36px;
-  }
-  #products{
-    flex-direction:column;
-    gap:45px;
-    padding:45px 15px;
-  }
-  .product{
-    width:230px;
-  }
-  section{
-    margin:45px 12px;
-    padding:30px;
-    border-radius:22px;
-  }
+  #hero h1{font-size:38px}
+  #products{gap:45px}
+  section{margin:45px 12px;padding:30px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND VIDEO -->
+<div id="loader"><span></span></div>
+
 <video autoplay muted loop playsinline id="bg-video">
   <source src="1.mp4" type="video/mp4">
 </video>
 
 <header>
-  <div>© Turkish Energy</div>
+  <div>⚡ Turkish Energy</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -173,71 +196,58 @@ footer{
   </nav>
 </header>
 
-<!-- HERO -->
 <div id="hero">
   <h1>TURKISH ENERGY</h1>
   <p>
-    Turkish Energy is a carbonated energy beverage developed for adult consumers who enjoy a refreshing drink experience.
-    This website serves as the official platform for product information, packaging details, and responsible consumption guidance.
+    A bold, refreshing carbonated beverage designed for adults who enjoy intense flavor and premium packaging.
+    This website provides official product and brand information.
   </p>
 </div>
 
-<!-- PRODUCTS -->
 <div id="products">
   <div class="product">
-    <img src="1.png" alt="Turkish Energy Can">
+    <img src="1.png">
     <div class="price">500ml Can – Rs. 250</div>
   </div>
 
   <div class="product">
-    <img src="2.png" alt="Turkish Energy Bottle">
+    <img src="2.png">
     <div class="price">500ml Bottle – Rs. 170</div>
   </div>
 </div>
 
-<!-- PRODUCT DETAILS -->
 <section id="details">
-<h2>Product Information</h2>
-<p>Turkish Energy is available in two packaging formats: a 500ml aluminum can and a 500ml plastic bottle.</p>
-<p>Both formats contain the same beverage formulation and carbonation level.</p>
-<p>The drink is designed to provide a crisp and refreshing taste.</p>
-<p>Best served chilled for optimal enjoyment.</p>
-<p>Store unopened containers in a cool and dry place away from direct sunlight.</p>
-<p>Once opened, consume promptly.</p>
+<h2><i class="fa-solid fa-bolt"></i>Product Information</h2>
+<p>Turkish Energy is available in premium aluminum can and PET bottle formats.</p>
+<p>Both contain the same carbonation, flavor profile, and formulation.</p>
+<p>Designed for a crisp, refreshing experience.</p>
 </section>
 
-<!-- RESPONSIBLE -->
 <section id="responsible">
-<h2>Responsible Consumption Notice</h2>
-<p>This beverage is intended for adult consumers only.</p>
-<p>Not suitable for children.</p>
-<p>Pregnant or nursing individuals should avoid consumption.</p>
+<h2><i class="fa-solid fa-circle-exclamation"></i>Responsible Consumption</h2>
+<p>For adults only (18+).</p>
+<p>Not suitable for children or pregnant individuals.</p>
 <p>Do not mix with alcohol.</p>
-<p>Excessive intake may cause discomfort.</p>
-<p>This product does not replace sleep, meals, or hydration.</p>
 <p>Consume in moderation.</p>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
-<h2>Frequently Asked Questions</h2>
-
-<p><strong>Is Turkish Energy a medicine?</strong></p>
-<p>No. It is a commercially produced beverage.</p>
-
-<p><strong>Does it provide medical benefits?</strong></p>
-<p>No medical or therapeutic claims are made.</p>
-
-<p><strong>Who can consume it?</strong></p>
-<p>It is intended for adults aged 18 and above.</p>
-
-<p><strong>Is daily consumption recommended?</strong></p>
-<p>Moderation is advised.</p>
+<h2><i class="fa-solid fa-question"></i>FAQ</h2>
+<p><strong>Is this a medicine?</strong> No.</p>
+<p><strong>Any medical claims?</strong> None.</p>
+<p><strong>Daily use?</strong> Moderation recommended.</p>
 </section>
 
 <footer>
 © 2026 Turkish Energy. All rights reserved.
 </footer>
 
+<script>
+window.onload=()=>document.getElementById("loader").style.display="none";
+</script>
+
 </body>
 </html>
+
+
+
